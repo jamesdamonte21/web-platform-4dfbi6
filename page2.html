@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Other page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="form.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.statically.io/gh/hankchizljaw/boilerform/70a13a07/dist/css/boilerform.min.css"
+    /> -->
+    <style>
+      .container {
+        max-width: 768px;
+        display: grid;
+        margin: auto;
+        padding: 0;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The boilerform namespace -->
+    <h1>Testing</h1>
+    <div class="container">
+      <select name="fav_color" id="fav_color" class="c-select-field__menu">
+        <option>Select Category</option>
+        <option value="Red">Red</option>
+        <option value="Orange">Orange</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+        <option value="Purple">Purple</option>
+      </select>
+      <div>
+        <label for="password" class="c-label">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="c-input-field"
+        />
+      </div>
+      <span></span>
+      <button class="c-button" type="submit">Signup</button>
+    </div>
+  </body>
+</html>

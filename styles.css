@@ -1,0 +1,636 @@
+/* A few styles that won't be necessary in myUL */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #111;
+  background-color: #edf1f6;
+  font-family: Open Sans, system-ui, sans-serif;
+}
+
+/* Default Links */
+
+a {
+  color: #01518a;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #003357;
+}
+
+a:active {
+  background-color: #333;
+}
+
+a:visited {
+  background-color: #01518a;
+}
+
+main {
+  padding: 1rem;
+  background: #edf1f6;
+}
+
+/* The card styles */
+.cards-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 558px;
+  min-height: 300px;
+  background-color: #fff;
+  border-radius: 2px;
+  border: #ccc 1px solid;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.card__title {
+  color: #01518a;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-left-column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 58%;
+  padding: 1rem;
+  flex-wrap: nowrap;
+}
+.card-right-column {
+  width: 42%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.card-right-column-item-1 {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: flex-end;
+}
+.card-right-column-item-2 {
+  display: flex;
+  align-items: center;
+  min-height: 208px;
+}
+.card-right-column-item-2 ul {
+  list-style: none;
+  padding-left: 0;
+}
+.card-right-column-item-2 ul li {
+  padding: 0.25rem;
+}
+
+.card__description {
+  margin: 0;
+  font-size: 14px;
+  color: #595958;
+}
+
+/* The column divider */
+.col__divider {
+  border-left: 1px solid #ccc;
+  height: 180px;
+}
+
+/* Disabled links in cards */
+.action-link--disabled {
+  color: #01518a;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
+.action-link--disabled:hover {
+  text-decoration: none;
+}
+
+.app-primary-green {
+  background-color: #146615;
+  border: 1px solid #146615;
+  color: #fff;
+  padding: 0.625rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.complete-text__small {
+  font-style: italic;
+  line-height: 0.875rem;
+  font-size: 12px;
+}
+/* Breadcrumbs */
+
+/* .breadcrumb__list ul,
+li {
+  display: inline;
+  list-style: none;
+  margin: 0px;
+  padding-left: 0px;
+}
+.breadcrumb__list li {
+  margin: 0px;
+  padding: 0px;
+} */
+
+/* Header styles */
+.detail-header {
+  padding: 0.875rem;
+  background: #fff;
+}
+.h1-pss-title {
+  font-family: 'Open Sans Regular', 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 1.3em !important;
+  font-weight: 400;
+  color: #303741;
+  margin-bottom: 0;
+}
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+/* The card icon styles */
+.card__icon-lrg {
+  fill: #01518a;
+}
+.card__icon-info {
+  fill: #01518a;
+}
+.card__icon-info:hover {
+  fill: #003357;
+}
+
+/* Left align the select menu */
+.ml-auto {
+  margin-left: auto;
+}
+
+/* Style for the select menu */
+.ul-select {
+  background-color: #fff;
+  border: 0.0625rem solid #595958;
+  border-radius: 3px;
+  box-shadow: none;
+  box-sizing: inherit;
+  width: 100%;
+  line-height: 1.4;
+  font-size: 1rem;
+  min-height: 1.75rem;
+  padding: 0.6rem 1rem;
+  margin-right: 1rem;
+}
+/* Misc Styles */
+.detail-header {
+  padding: 0.875rem;
+  background: #fff;
+}
+.h1-pss-title {
+  font-family: 'Open Sans Regular', 'Open Sans', Arial, Helvetica, sans-serif !important;
+  font-size: 1.3em !important;
+  font-weight: 400;
+  color: #303741;
+  margin-bottom: 0;
+}
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+/* Left align the select menu */
+.ml-auto {
+  margin-left: auto;
+}
+
+.ul-select {
+  background-color: #fff;
+  border: 0.0625rem solid #595958;
+  border-radius: 3px;
+  box-shadow: none;
+  box-sizing: inherit;
+  width: 100%;
+  line-height: 1.4;
+  font-size: 1rem;
+  min-height: 1.75rem;
+  padding: 0.6rem 1rem;
+  margin-right: 1rem;
+}
+
+/* Working with inconsistently sized logos*/
+.supply-chain-logo img {
+  width: 96px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+/* Modal styles */
+
+.modal-header {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.modal-heading {
+  margin-top: 0;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 24px;
+  text-align: left;
+  color: #2a313a;
+  align-self: center;
+}
+.close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-self: flex-start;
+  height: 16px;
+  text-decoration: none;
+  width: 16px;
+  margin-left: auto;
+}
+.close svg {
+  width: 16px;
+}
+.modal-body {
+  background: #fff;
+  box-shadow: -20px 20px 35px 1px rgba(10, 49, 86, 0.18);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  max-width: 400px;
+  width: 100%;
+}
+.modal-wrapper {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+#modal {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  visibility: hidden;
+}
+#modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal:target .modal-body {
+  opacity: 1;
+  transform: translateY(1);
+}
+#modal .modal-body {
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 0.25s ease-in-out;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Only needed if support */
+.outside-trigger {
+  bottom: 0;
+  cursor: default;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-right: 1rem;
+  align-items: center;
+}
+.h4-sub-headings {
+  margin-top: 1.5rem;
+  margin-bottom: 0px;
+}
+
+.ul-mt {
+  margin-top: 0.25rem;
+}
+/* Button Styles For Contact Us */
+
+.pss-button {
+  border: 0.0625rem solid #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  outline: 0;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  min-height: 2.5rem;
+}
+.pss-button.-app-primary {
+  background-color: #01518a;
+  border-color: #01518a;
+  color: #fff;
+}
+.pss-button.-app-primary:hover,
+.pss-button.-app-primary:focus {
+  background-color: #003357;
+  border-color: #003357;
+}
+.pss-button.-app-primary:active {
+  background-color: #001524;
+  border-color: #001524;
+}
+hr.line {
+  display: block;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(112, 112, 112, 0.2);
+}
+.pss-button {
+  min-width: 118px;
+  font-size: 0.875rem;
+  padding: 0;
+}
+
+/* Start Responsive */
+
+/* On screens that are 1366px or less*/
+@media screen and (max-width: 1366px) {
+  .cards-container {
+    justify-content: center;
+  }
+  .instruction-text {
+    justify-content: center;
+  }
+}
+/* Button Defaults */
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button {
+  text-transform: none;
+}
+button {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring {
+  outline: pxtorem(1) dotted ButtonText;
+}
+.ul-button {
+  border: 0.0625rem solid #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: 0;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ul-button.-app-primary {
+  background-color: #01518a;
+  border-color: #01518a;
+  color: #fff;
+}
+.ul-button.-app-primary:hover,
+.ul-button.-app-primary:focus {
+  background-color: #003357;
+  border-color: #003357;
+}
+.ul-button.-app-primary:active {
+  background-color: #001524;
+  border-color: #001524;
+}
+
+/* Blue Notification Banner */
+.icon {
+  display: inline-block;
+  height: 18px;
+}
+.icon.icon--info {
+  background-image: url(https://uat.my.ul.com/wp-content/themes/myul/dist/02b497966dc5de0129edb6597c0b7dfa.svg);
+}
+.notifications > .notification + .notification--info {
+  border-top: solid 1px #4a92e2;
+}
+.notification {
+  display: flex;
+  align-items: stretch;
+  font-weight: 600;
+  font-size: 14px;
+  min-height: 52px;
+}
+.notification a {
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+.notification.notification--info,
+.notification {
+  background-color: #6ea8e8;
+  color: #fff;
+}
+.notification.notification--info .notification__icon,
+.notification .notification__icon {
+  background-color: #4a92e2;
+  color: #fff;
+}
+.notification.notification--info .notification__actions,
+.notification.notification--info .notification__actions button,
+.notification .notification__actions,
+.notification .notification__actions button {
+  color: #fff;
+}
+.notification.notification--info a:link,
+.notification a:link {
+  color: #fff;
+}
+.notification.notification--info a:hover,
+.notification a:hover {
+  color: #fff;
+}
+.notification.notification--info a:visited,
+.notification a:visited {
+  color: #fff;
+}
+.notification.notification--info a:active,
+.notification a:active {
+  border-bottom: dotted 1px #fff;
+}
+.notification > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.notification .notification__icon {
+  flex: 0 0 auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+}
+.notification .notification__body {
+  flex: 1 1 0px;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+.notification .notification__actions {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.notification .notification__action {
+  background-color: rgba(0, 0, 0, 0);
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  border: none;
+  font-size: 2em;
+  line-height: 1;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* Instruction Text */
+.instruction-text {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* The Footer is based on OULDS */
+.ul-footer {
+  margin-top: 1.875rem;
+}
+.ul-footer *,
+.ul-footer *::after,
+.ul-footer *::before {
+  box-sizing: inherit;
+}
+.ul-footer ul {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+}
+.ul-footer .ul-footer__main {
+  align-items: center;
+  display: grid;
+  gap: 0 2rem;
+  grid-template-areas: 'logo copyright . social' 'logo legal     . social';
+  grid-template-columns: auto auto 1fr auto;
+  padding: 2rem 2rem;
+}
+.ul-footer .ul-footer__main .ul-footer__logo {
+  grid-area: logo;
+}
+.ul-footer .ul-footer__main .ul-footer__copyright {
+  grid-area: copyright;
+  margin: 0;
+}
+.ul-footer .ul-footer__main .ul-footer__legal {
+  grid-area: legal;
+}
+.ul-footer .ul-footer__main .ul-footer__legal ul {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+@media (max-width: 1200px) {
+  .ul-footer .ul-footer__main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .ul-footer .ul-footer__main .ul-footer__logo {
+    margin-bottom: 2.25rem;
+  }
+  .ul-footer .ul-footer__main .ul-footer__copyright {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .ul-footer .ul-footer__main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .ul-footer .ul-footer__main .ul-footer__legal ul {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.ul-footer.-dark .ul-footer__main {
+  background: #1a1a1a;
+}
+.ul-footer.-dark ul li a {
+  color: #fff;
+}
+.ul-footer.-minimal .ul-footer__main {
+  grid-template-areas: 'logo copyright . legal';
+  grid-template-columns: auto auto 1fr auto;
+  padding: 1rem;
+}
+@media (max-width: 1200px) {
+  .ul-footer.-minimal .ul-footer__main .ul-footer__logo {
+    margin-bottom: 1rem;
+  }
+  .ul-footer.-minimal .ul-footer__main .ul-footer__copyright {
+    margin-bottom: 0.5rem;
+  }
+}
+.ul-footer.-minimal .ul-footer__main p {
+  margin: 0;
+}
