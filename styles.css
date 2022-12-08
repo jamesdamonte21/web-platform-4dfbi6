@@ -244,10 +244,25 @@ li {
   object-fit: contain;
 }
 
+/* When no logo is provided, use the following */
+.initial-logo {
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /* Colors */
+  background-color: #aaa;
+    height: 4rem;
+  width: 6rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #686868;
+}
 /* Modal styles */
 
 .modal-header {
-  align-items: flex-start;
+  align-items: center;
+  margin-bottom: 0px !important;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -260,6 +275,7 @@ li {
   text-align: left;
   color: #2a313a;
   align-self: center;
+  margin-bottom: 0;
 }
 .close {
   background: none;
@@ -311,12 +327,18 @@ li {
   transform: translateY(1);
 }
 #modal .modal-body {
-  max-width: 800px;
+  max-width: 818px;
   opacity: 0;
   transform: translateY(-100px);
   transition: opacity 0.25s ease-in-out;
-  width: 100%;
+
   z-index: 1;
+  background: #fff;
+  border: 0.0625rem solid #ebebea;
+  border-radius: 3px;
+  box-shadow: 0 0 0.75rem rgb(0 0 0 / 25%);
+  margin: 0 auto;
+  width: 51rem;
 }
 
 /* Only needed if support */
@@ -343,6 +365,10 @@ li {
 
 .ul-mt {
   margin-top: 0.25rem;
+}
+
+.ul-mt li {
+  line-height: 1.875rem;
 }
 /* Button Styles For Contact Us */
 
@@ -389,17 +415,6 @@ hr.line {
   padding: 0;
 }
 
-/* Start Responsive */
-
-/* On screens that are 1366px or less*/
-@media screen and (max-width: 1366px) {
-  .cards-container {
-    justify-content: center;
-  }
-  .instruction-text {
-    justify-content: center;
-  }
-}
 /* Button Defaults */
 button {
   font-family: inherit;
@@ -586,18 +601,17 @@ button:-moz-focusring {
   gap: 1rem;
   margin-bottom: 0;
 }
-@media (max-width: 1200px) {
-  .ul-footer .ul-footer__main {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+
+/* Media Queries Start*/
+/* Start Responsive */
+
+/* On screens that are 1366px or less*/
+@media screen and (max-width: 1366px) {
+  .cards-container {
+    justify-content: center;
   }
-  .ul-footer .ul-footer__main .ul-footer__logo {
-    margin-bottom: 2.25rem;
-  }
-  .ul-footer .ul-footer__main .ul-footer__copyright {
-    margin-bottom: 0.5rem;
+  .instruction-text {
+    justify-content: center;
   }
 }
 @media (max-width: 768px) {
@@ -624,6 +638,18 @@ button:-moz-focusring {
   padding: 1rem;
 }
 @media (max-width: 1200px) {
+  .ul-footer .ul-footer__main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .ul-footer .ul-footer__main .ul-footer__logo {
+    margin-bottom: 2.25rem;
+  }
+  .ul-footer .ul-footer__main .ul-footer__copyright {
+    margin-bottom: 0.5rem;
+  }
   .ul-footer.-minimal .ul-footer__main .ul-footer__logo {
     margin-bottom: 1rem;
   }
